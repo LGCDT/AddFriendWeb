@@ -17,7 +17,11 @@
   <script>
     async function sendShare() {
       const result = await liff.shareTargetPicker([
-        {
+        
+                  {
+          "type": "flex",
+          "altText": "Flex Message",
+          "contents": {
   "type": "bubble",
   "hero": {
     "type": "image",
@@ -81,6 +85,8 @@
     ]
   }
 }
+                  }
+        }
       ])
       if (result) {
         alert(`[${result.status}] Message sent!`)
